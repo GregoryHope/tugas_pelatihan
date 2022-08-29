@@ -1,27 +1,30 @@
-#!/usr/bin/python
-
 """
 Identitas:
-Nama: Achmadi S.T. M.T.
-Email: mekatronik.achmadi@gmail.com
+Nama: Gregory Hope Soegiantoro
+Email: gsoegiantoro@gmail.com
 """
 
-# impor untuk numpy
+# impor numpy
 import numpy as np
 
 # impor library plot
 from matplotlib import pyplot as plt
 
-# data dasar
-sudut = np.linspace(0, 2 * np.pi, 100)
+# data dasar dan parameter
+a = 15
+b = 6
+c = 100
+alpha = np.linspace(-2 * np.pi, 100, num=100)
+k = np.linspace(0, 45, num=100)
+r = k * (a+np.sin(theta*b+(k/c)))
 
 # koordinat x
-x = 16 * ( np.sin(sudut) ** 3 )
+x = r * np.cos(theta)
 
-# koordinat y yang merupakan kombinasi 4 sinus beda frekuensi pada sudut sama
-y = 13 * np.cos(sudut) - 5* np.cos(2*sudut) - 2 * np.cos(3*sudut) - np.cos(4*sudut)
+# koordinat y
+y = r * np.sin(theta)
 
 # tampilkan
 plt.plot(x, y)
-plt.title('hhhhmmmmmmmmmmmmmmmmm')
+plt.title('Rose for Angel')
 plt.show()
